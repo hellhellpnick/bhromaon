@@ -1,0 +1,33 @@
+.navigation{
+    &__list{
+        list-style: none;
+        @include flex(space-around, center,column);
+        @media screen and (min-width: $screen-tablet){
+            flex-direction: row;
+        }
+        &-item{
+            @include text(14px, 700, $white);
+            text-transform: uppercase;
+            transition: all 0.2s ease;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            cursor: pointer;
+            @media screen and (min-width: $screen-tablet) {
+                margin: 0;
+                padding: 0;
+                &:not(:last-child){
+                    margin-right: 42px;
+                }
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+            
+        }
+    }
+    &__link
+    {
+        text-decoration: none;
+        color: $white;
+    }
+}

@@ -1,0 +1,40 @@
+.footer{
+    width: 100%;
+    background-color: $dark;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    &--container{
+        @include flex(center, center, column);
+    }
+    &-title{
+        @include text(24px, 400, $white, $secondary-font);
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+    &-text{
+        @include text(16px, 400, $white, $secondary-font);
+        letter-spacing: -0.5px;
+        margin-bottom: 30px;
+    }
+&__list{
+    list-style: none;
+    @include flex(flex-start, stretch, row);
+   
+}
+&__icon{
+    @include svg(15px, $white);
+    cursor: pointer;
+    transition: all 0.5s ease;
+    &:hover{
+        fill: $blue;
+        transform: scale(1.5);
+    }
+    &-wrapper{
+        width: 8px; 
+        &:not(:last-child){
+            margin-right: 25px;
+            
+        }
+    }
+}
+}

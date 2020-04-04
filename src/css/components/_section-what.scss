@@ -1,0 +1,12 @@
+.section-what{
+    background-image: url("/images/section-2.png");
+    background-size: cover;
+    background-position: 70% 80%;
+    position: relative;
+    padding-top: 32%;
+    height: 100vh;
+    @media screen and (min-width: $screen-tablet){
+        height:700px;
+        padding-top: 12%;
+    }
+}

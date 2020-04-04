@@ -1,0 +1,12 @@
+.section-travel{
+    background-image: url("/images/section-3.png");
+    background-size: cover;
+    background-position: 70% 80%;
+    position: relative;
+    height: 100vh;
+    padding-top: 22%;
+    @media screen and (min-width: $screen-tablet){
+        height:700px;
+        padding-top: 12%;
+    }
+}

@@ -1,0 +1,59 @@
+.section-choose{
+    background-image: url("/images/section-1.png");
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    height: 100vh;
+    padding-top: 140px;
+    &__wrapper{
+        @include flex(space-between, center, column-reverse);
+        @media screen and (min-width:$screen-tablet){
+            flex-direction: row;
+        }
+    }
+    &__content{
+        max-width: 530px;
+    }
+    &__title{
+        @include text(36px, 400, $white);
+        margin-bottom: 62px;
+    }
+    &__text{
+        @include text(16px, 400, $grey, $secondary-font);
+        text-align: justify;
+        margin-bottom: 40px;
+        &:nth-child(3){
+            padding-bottom: 48px;
+        }
+        
+    }
+    &__image{
+        width: 475px;
+        cursor: pointer;
+    }
+    &__picture{       
+        &-wrapper{
+            max-width: 350px;
+            @include padding-hack(49%); 
+            transition: all 0.5s ease;
+            border: 1px solid transparent;
+            margin: 0 auto;
+            @media screen and (min-width: $screen-tablet){
+                margin: 0;
+                &:hover{
+                    border-radius: 10px;
+                    box-shadow: 0 0 10px 1px #000;
+                    transform: scale(1.1);
+                }
+                &:last-child{
+                    margin-left: auto;
+                    @include padding-hack(41.2%);
+                }
+                &:first-child{
+                    margin-right: auto;
+                }
+            }
+            
+        }
+    }
+}

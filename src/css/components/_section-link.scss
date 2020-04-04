@@ -1,0 +1,55 @@
+.section-link{
+    width: 100%;
+    background-color: $dark;
+    &__list{
+    list-style: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    @include flex(space-around, stretch,column);
+    @media screen and (min-width: $screen-tablet){
+        flex-direction: row;
+        padding-top: 30px;
+        padding-bottom: 39px;
+    }
+    &-item{
+        @include flex(flex-start, center, column);
+        margin-bottom: 25px;
+        @media screen and (min-width: $screen-tablet){
+            margin: 0;
+        }
+    }
+    &-title{
+        @include text(36px, 400, $white);
+        @media screen and (max-width: $screen-tablet){
+            font-size: 24px;
+        }
+    }
+    &-picture{
+        @include svg(40px);
+        margin-bottom: 15px;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        @media screen and (min-width: $screen-tablet){
+            @include svg(60px);  
+        }
+        &--search{
+            fill: $blue;
+            &:hover{
+                fill: #00a2ff;
+            }
+        }
+        &--success{
+            fill: #ff6363;
+            &:hover{
+                fill: $blue;
+            }
+        }
+        &--ok{
+            fill: #00a2ff;
+            &:hover{
+                fill: #ff6363;
+            }
+        }
+    }
+}
+}
