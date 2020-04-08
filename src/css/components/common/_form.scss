@@ -1,6 +1,6 @@
 .form{
     background-color: $white;
-    padding: 1px;
+    padding: 2px;
     @include flex(center, stretch, column);
     margin-bottom: 120px;
     @media screen  and (min-width: $screen-tablet){
@@ -45,8 +45,10 @@
         font-family: $base-font;
         text-transform: uppercase;
         transition: all 0.5s ease;
+        @media screen and (min-width: $screen-tablet){
         &:hover{
             transform: scale(1.1);
+        }
         }
     }
     &__svg{
