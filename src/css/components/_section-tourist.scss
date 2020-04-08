@@ -5,12 +5,13 @@
     background-position: center center;
     position: relative;
     height:100vh;
-    padding-top: 20%;
+    padding-top: 10%;
     height: max-content;
     padding-bottom: 100px;
     @media screen and (min-width: $screen-tablet){
         height:100vh;
-        padding-bottom: 0;
+        height: max-content;
+        padding-bottom: 10%;
     }
     &__title{
         @include text(36px, 400, $white);

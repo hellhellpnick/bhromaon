@@ -8,12 +8,13 @@
     @include flex(space-around, stretch,column);
     @media screen and (min-width: $screen-tablet){
         flex-direction: row;
-        padding-top: 30px;
-        padding-bottom: 39px;
+        padding-top: 60px;
+        padding-bottom: 60px;
     }
     &-item{
         @include flex(flex-start, center, column);
         margin-bottom: 25px;
+        position: relative;
         @media screen and (min-width: $screen-tablet){
             margin: 0;
         }
@@ -53,3 +54,31 @@
     }
 }
 }
+.list__line {
+    @media screen  and (max-width: $screen-tablet){
+        display: none;
+    }
+    flex-grow: 1;
+    position: relative;
+    &:after {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 160%;
+        left: -70px;
+        top: -30px;
+        height: 94px;
+        border-radius: 50%;
+        border-top: 2px dashed rgb(70, 69, 69);
+      }
+      &:before {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 120%;
+        top: 0;
+        height: 2px;
+        background-color: #333333;
+        z-index: 2;
+      }
+  }
