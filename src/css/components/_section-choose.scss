@@ -4,7 +4,6 @@
     background-position: center center;
     position: relative;
     padding-top: 140px;
-    padding-bottom: 20%;
     @media screen and (max-width: $screen-tablet){
         height: 100vh;   
         height: max-content;   
@@ -13,6 +12,7 @@
     
     &__wrapper{
         @include flex(space-between, center, column-reverse);
+        padding-bottom: 140px;
         @media screen and (min-width:$screen-tablet){
             flex-direction: row;
         }
@@ -28,6 +28,7 @@
         @include text(16px, 400, $grey, $secondary-font);
         text-align: justify;
         margin-bottom: 40px;
+        line-height: 30px;
         &:nth-child(3){
             padding-bottom: 48px;
         }
@@ -42,10 +43,10 @@
         }
     }
     &__picture{   
-        width: 100%;    
+        width: 350px;    
         height: 100%;
         &-wrapper{
-            width: 100%;
+            width: 350px;
             height: 100%;
             @include padding-hack(49.7%); 
             transition: all 0.5s ease;
@@ -54,17 +55,18 @@
             @media screen and (min-width: $screen-tablet){
                 max-width: 350px;
                 margin: 0;
-                &:hover{
-                    border-radius: 10px;
-                    box-shadow: 0 0 10px 1px #000;
-                    transform: scale(1.1);
-                }
                 &:last-child{
                     margin-left: auto;
                     @include padding-hack(41.2%);
+                    &:hover{
+                        transform: translateX(-100px);
+                    }
                 }
                 &:first-child{
                     margin-right: auto;
+                    &:hover{
+                        transform: translateX(100px);
+                    }
                 }
             }
             

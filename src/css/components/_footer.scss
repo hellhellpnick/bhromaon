@@ -3,7 +3,7 @@
     background-color: $dark;
     padding-top: 50px;
     padding-bottom: 20px;
-    &--container{
+    &__wrapper{
         @include flex(center, center, column);
     }
     &-title{
@@ -22,17 +22,17 @@
    
 }
 &__icon{
-    @include svg(15px, $white);
+    @include svg(13px, $white);
     cursor: pointer;
     transition: all 0.5s ease;
     &:hover{
         fill: $blue;
         transform: scale(1.5);
     }
-    &-wrapper{
-        width: 8px; 
+    &-inner{
+        width: 10px; 
         &:not(:last-child){
-            margin-right: 25px;
+            margin-right: 23px;
             
         }
     }

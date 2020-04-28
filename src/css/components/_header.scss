@@ -28,21 +28,17 @@
         }
     }
     &__text{
-        @include text(14px, 300, $white, $secondary-font);
-        text-align: center;
-        letter-spacing: 2px;
-        margin-bottom: 15px;
-    }
-    &__svg{
-        cursor: pointer;
-        display: block;
-        margin: 0 auto;
-        transition: all 0.5s ease;
-        @include svg(15px, $white);
-        &:hover{
-            fill: $grey;
-            transform: translateY(10px);
-        }
+            @include text(14px, 300, $white, $secondary-font);
+            text-align: center;
+            letter-spacing: 2px;
+            max-width: 150px;
+            margin: 0 auto;
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: all 0.5s ease;
+            &:hover {
+                color: $grey;
+            }
     }
     &__footer{
         @include flex(center, center,column);
@@ -54,9 +50,12 @@
         &-text{
             @include text(24px, 700, $white);
             margin-bottom: 25px;
-            line-height: -20px;
+            vertical-align: top;
+            line-height: 20px;
             text-transform: uppercase;
             padding-bottom: 20px;
+            font-family: $secondary-font;
+            letter-spacing: 5px;
             @media screen and (min-width: $screen-tablet){
                 margin: 0;
                 padding: 0;
