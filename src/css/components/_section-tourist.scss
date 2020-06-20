@@ -40,13 +40,15 @@
         }
         &-wrapper{
             max-width: 455px;
-            max-height: 295px;
+            max-height: 283px;
+            margin-bottom: 50px;
         }
     }
     &__wrapper{
-        @include flex(flex-end, stretch, column);
+        @include flex(flex-end, center, column);
         @media screen and (min-width: $screen-desktop){
             flex-direction: row;
+            align-items: stretch;
         }
     }
     &__content{
